@@ -26,6 +26,7 @@ public class SecurityConfig {
                         .anyRequest().permitAll() // 모든 요청 허용
                 );
         return http.build();
+
     }
 
     @Bean
