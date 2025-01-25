@@ -45,6 +45,11 @@ dependencies {
 	runtimeOnly ("io.jsonwebtoken:jjwt-impl:0.11.5")
 	runtimeOnly ("io.jsonwebtoken:jjwt-jackson:0.11.5")
 
+	// 무중단 자동 배포 redis 세팅
+	implementation ("org.springframework.boot:spring-boot-starter-actuator")
+	implementation ("org.springframework.boot:spring-boot-starter-data-redis")
+	implementation ("org.springframework.session:spring-session-data-redis")
+
 }
 
 tasks.withType<Test> {
