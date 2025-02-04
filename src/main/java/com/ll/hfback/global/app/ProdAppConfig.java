@@ -5,17 +5,18 @@ import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 
 @Configuration
-public class AppConfig {
+@Profile("site")
+public class ProdAppConfig {
     @Getter
     private static ObjectMapper objectMapper;
 
     @Autowired
     public void setObjectMapper(ObjectMapper objectMapper) {
-        AppConfig.objectMapper = objectMapper;
+        ProdAppConfig.objectMapper = objectMapper;
     }
-
 
     @Getter
     private static String siteFrontUrl;
@@ -23,22 +24,14 @@ public class AppConfig {
     @Getter
     private static String siteBackUrl;
 
-    @Getter
-    private static String devFrontUrl;
-
     @Value("${custom.site.frontUrl}")
     public void setSiteFrontUrl(String siteFrontUrl) {
-        AppConfig.siteFrontUrl = siteFrontUrl;
+        ProdAppConfig.siteFrontUrl = siteFrontUrl;
     }
 
     @Value("${custom.site.backUrl}")
     public void setSiteBackUrl(String siteBackUrl) {
-        AppConfig.siteBackUrl = siteBackUrl;
-    }
-
-    @Value("${custom.dev.frontUrl}")
-    public void setDevFrontUrl(String devFrontUrl) {
-        AppConfig.devFrontUrl = devFrontUrl;
+        ProdAppConfig.siteBackUrl = siteBackUrl;
     }
 
     public static boolean isNotProd() {

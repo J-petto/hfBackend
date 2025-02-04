@@ -1,5 +1,10 @@
 server:
   port: 8090
+
+custom:
+  site:
+    name: "SITE"
+
 spring:
   output:
     ansi:
