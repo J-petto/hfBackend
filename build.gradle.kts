@@ -2,7 +2,7 @@ plugins {
 	java
 	id("org.springframework.boot") version "3.4.1"
 	id("io.spring.dependency-management") version "1.1.7"
-	id("com.ewerk.gradle.plugins.querydsl") version "1.0.10"
+//	id("com.ewerk.gradle.plugins.querydsl") version "1.0.10"
 }
 
 group = "com.ll"
@@ -83,7 +83,7 @@ tasks.withType<Test> {
 	useJUnitPlatform()
 }
 
-val querydslDir = "src/main/generated"
+val querydslDir = layout.buildDirectory.dir("generated/querydsl")
 
 sourceSets {
 	main {
