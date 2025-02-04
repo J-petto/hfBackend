@@ -1,6 +1,6 @@
 package com.ll.hfback.global.security;
 
-import com.ll.hfback.global.app.DevAppConfig;
+import com.ll.hfback.global.app.AppConfig;
 import com.ll.hfback.global.oauth2.CustomAuthorizationRequestResolver;
 import com.ll.hfback.global.oauth2.CustomOAuth2AuthenticationSuccessHandler;
 import lombok.RequiredArgsConstructor;
@@ -32,11 +32,14 @@ public class ApiSecurityConfig {
     public UrlBasedCorsConfigurationSource corsConfigurationSource() {
         // 위에서 설정한 CORS 설정 코드와 동일
         CorsConfiguration corsConfig = new CorsConfiguration();
-        corsConfig.addAllowedOrigin(DevAppConfig.getSiteFrontUrl());
+        corsConfig.addAllowedOrigin(AppConfig.getSiteFrontUrl());
+        corsConfig.addAllowedOrigin(AppConfig.getDevFrontUrl());
         corsConfig.addAllowedMethod("*");
         corsConfig.addAllowedHeader("*");
 
-        System.out.println("현재 프론트 url" + DevAppConfig.getSiteFrontUrl());
+        corsConfig.addAllowedMethod("*");
+        corsConfig.addAllowedHeader("*");
+
 
         corsConfig.setAllowCredentials(true);
 

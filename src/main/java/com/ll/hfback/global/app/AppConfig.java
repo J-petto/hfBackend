@@ -8,14 +8,13 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
 @Configuration
-@Profile("site")
-public class ProdAppConfig {
+public class AppConfig {
     @Getter
     private static ObjectMapper objectMapper;
 
     @Autowired
     public void setObjectMapper(ObjectMapper objectMapper) {
-        ProdAppConfig.objectMapper = objectMapper;
+        AppConfig.objectMapper = objectMapper;
     }
 
     @Getter
@@ -24,14 +23,22 @@ public class ProdAppConfig {
     @Getter
     private static String siteBackUrl;
 
+    @Getter
+    private static String devFrontUrl;
+
     @Value("${custom.site.frontUrl}")
     public void setSiteFrontUrl(String siteFrontUrl) {
-        ProdAppConfig.siteFrontUrl = siteFrontUrl;
+        AppConfig.siteFrontUrl = siteFrontUrl;
     }
 
     @Value("${custom.site.backUrl}")
     public void setSiteBackUrl(String siteBackUrl) {
-        ProdAppConfig.siteBackUrl = siteBackUrl;
+        AppConfig.siteBackUrl = siteBackUrl;
+    }
+
+    @Value("${custom.dev.frontUrl}")
+    public void setDevFrontUrl(String devFrontUrl) {
+        AppConfig.devFrontUrl = devFrontUrl;
     }
 
     public static boolean isNotProd() {
