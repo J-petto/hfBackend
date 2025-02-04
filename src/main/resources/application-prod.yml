@@ -18,6 +18,18 @@ spring:
         format_sql: false
         highlight_sql: false
         use_sql_comments: false
+  security:
+    oauth2:
+      client:
+        registration:
+          kakao:
+            redirect-uri: "${custom.site.backUrl}/login/oauth2/code/{registrationId}"
+          google:
+            redirect-uri: "${custom.site.backUrl}/login/oauth2/code/{registrationId}"
+          naver:
+            redirect-uri: "${custom.site.backUrl}/login/oauth2/code/{registrationId}"
+          github:
+            redirect-uri: "${custom.site.backUrl}/login/oauth2/code/{registrationId}"
 logging:
   level:
     com.ll.demo03: INFO
