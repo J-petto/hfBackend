@@ -1,11 +1,6 @@
 server:
   port: 8090
-  shutdown: graceful
 spring:
-  autoconfigure:
-    exclude:
-  lifecycle:
-    timeout-per-shutdown-phase: 1h
   datasource:
     url: jdbc:mysql://172.17.0.1:3306/hf_prod
     username: root
@@ -13,9 +8,8 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   data:
     redis:
-      host: 172.17.0.1
+      host: redis_1    # Docker container name으로 변경
       port: 6379
-      password: ${custom.secret.spring.data.redis.password}
   jpa:
     hibernate:
       ddl-auto: update
