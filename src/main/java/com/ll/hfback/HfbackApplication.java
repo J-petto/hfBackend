@@ -12,6 +12,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class HfbackApplication {
 
 	public static void main(String[] args) {
+		System.getProperties().setProperty("aws.java.v1.disableDeprecationAnnouncement", "true");
 		SpringApplication.run(HfbackApplication.class, args);
 	}
 
