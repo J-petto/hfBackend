@@ -40,6 +40,7 @@ public class CustomOAuth2AuthenticationSuccessHandler extends SavedRequestAwareA
       throw new ServiceException(ErrorCode.REDIRECT_URL_NOT_FOUND);
     }
 
-    response.sendRedirect(redirectUrl);
+    String fullUrl = redirectUrl;
+    response.sendRedirect(fullUrl);
   }
 }
