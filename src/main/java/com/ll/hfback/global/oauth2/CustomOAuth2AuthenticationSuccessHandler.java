@@ -14,6 +14,9 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
 
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
+
 @Component
 @RequiredArgsConstructor
 public class CustomOAuth2AuthenticationSuccessHandler extends SavedRequestAwareAuthenticationSuccessHandler {
@@ -31,6 +34,7 @@ public class CustomOAuth2AuthenticationSuccessHandler extends SavedRequestAwareA
 
     String redirectUrl = request.getParameter("state");
     if (redirectUrl != null && !redirectUrl.isEmpty()) {
+      redirectUrl = URLDecoder.decode(redirectUrl, StandardCharsets.UTF_8);
       System.out.println("Redirecting to: " + redirectUrl);
     } else {
       throw new ServiceException(ErrorCode.REDIRECT_URL_NOT_FOUND);
