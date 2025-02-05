@@ -4,3 +4,4 @@
 build 오류 잡기 (DSL 문제) 해결
 CORS 오류 확인
 mysql 초기화
+악
