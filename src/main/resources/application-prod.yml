@@ -9,6 +9,7 @@ spring:
   data:
     redis:
       port: 6379
+      host: docker.host.internal
   jpa:
     hibernate:
       ddl-auto: update
