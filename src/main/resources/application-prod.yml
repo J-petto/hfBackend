@@ -39,5 +39,5 @@ logging:
     org.hibernate.orm.jdbc.extract: INFO
     org.springframework.transaction.interceptor: INFO
 custom:
-  site:
-    name: "My Site Prod"
+  cookie:
+    domain: hf.codingtori.site
