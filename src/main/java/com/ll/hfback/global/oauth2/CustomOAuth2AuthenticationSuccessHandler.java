@@ -34,7 +34,6 @@ public class CustomOAuth2AuthenticationSuccessHandler extends SavedRequestAwareA
 
     String redirectUrl = request.getParameter("state");
     if (redirectUrl != null && !redirectUrl.isEmpty()) {
-      redirectUrl = URLDecoder.decode(redirectUrl, StandardCharsets.UTF_8);
       System.out.println("Redirecting to: " + redirectUrl);
     } else {
       throw new ServiceException(ErrorCode.REDIRECT_URL_NOT_FOUND);
