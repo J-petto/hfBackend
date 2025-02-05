@@ -8,8 +8,9 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   data:
     redis:
-      host: 43.201.15.197
+      host: 172.17.0.5
       port: 6379
+      password: hf123414
   jpa:
     hibernate:
       ddl-auto: update
