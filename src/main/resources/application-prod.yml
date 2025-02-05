@@ -8,7 +8,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   data:
     redis:
-      host: localhost    # Docker container name으로 변경
+      host: 172.17.0.5    # Docker container name으로 변경
       port: 6379
   jpa:
     hibernate:
