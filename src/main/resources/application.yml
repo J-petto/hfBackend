@@ -92,20 +92,3 @@ logging:
     org.hibernate.orm.jdbc.bind: TRACE
     org.hibernate.orm.jdbc.extract: TRACE
     org.springframework.transaction.interceptor: TRACE
-
-custom:
-  dev:
-    cookieDomain: localhost
-    frontUrl: "http://${custom.dev.cookieDomain}:5173"
-    backUrl: "http://${custom.dev.cookieDomain}:${server.port}"
-  prod:
-    cookieDomain: hf.codingtori.site
-    frontUrl: "https://www.${custom.prod.cookieDomain}"
-    backUrl: "https://api.${custom.prod.cookieDomain}"
-  site:
-    name: "SITE PROD"
-    cookieDomain: "${custom.prod.cookieDomain}"
-    frontUrl: "${custom.prod.frontUrl}"
-    backUrl: "${custom.prod.backUrl}"
-  cookie:
-    domain: localhost
