@@ -438,23 +438,8 @@ Mysql, Redis
    - 공지사항 작성 기능
 - 관리자가 작성한 공지사항 조회 및 댓글 작성 기능
 
-
-## 🔧 기술구현(단체)
-[발표 영상 올릴예정]
-
 ## 🎞️ 시연 영상
-
-#### 사용자, 알림
-![시연1](https://github.com/user-attachments/assets/e1503445-701c-4b99-a0c5-3d1c5ebb4cde)
-
 #### 배너, 축제/공연 검색
 ![시연2](https://github.com/user-attachments/assets/1a945d90-df07-43e1-b7b3-9e987961e206)
 
-#### 모임(채팅방), 댓글
-![시연3](https://github.com/user-attachments/assets/54cafc31-96a6-4d63-9bc8-90927da2b1fa)
 
-#### 단체 채팅
-![시연4](https://github.com/user-attachments/assets/ad47cbae-aec6-4f63-b60a-2d1985b6046e)
-
-#### 공지사항, 관리자 페이지
-![시연5](https://github.com/user-attachments/assets/2d0dc00a-e92f-4fe0-8ad0-d19c142fe29a)
